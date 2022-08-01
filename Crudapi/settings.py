@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+# from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tv0b+d$rd!1vvep4-7+3mxt9sxswb&2p#j3bruwlmparv38m$_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('Debug')
+
+# DEBUG = config('Debug')
+
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -77,13 +80,24 @@ WSGI_APPLICATION = 'Crudapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
+# For hiding the credentials
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': config('Name'),
+#         'HOST': config('Host'),
+#         'USER': config('User'),
+#         'PASSWORD': config('Password'),
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('Name'),
-        'HOST': config('Host'),
-        'USER': config('User'),
-        'PASSWORD': config('Password'),
+        'NAME': 'itemdatabse',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'ravikantsql1',
     }
 }
 
