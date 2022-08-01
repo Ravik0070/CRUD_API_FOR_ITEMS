@@ -11,3 +11,7 @@ Following are the routes of the api functions:
         'Delete': 'item-delete/<str:pk>',
 
 for the frontend onlhy url is there as its a single page App.
+
+For security purpose Database credentials, Debug , Key is kept hidden using Decouple.
+
+Python Anywhere : http://ravikant12.pythonanywhere.com/
