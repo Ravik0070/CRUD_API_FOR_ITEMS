@@ -1,0 +1,1 @@
+web: gunicorn Crudapi.wsgi --log-file -
